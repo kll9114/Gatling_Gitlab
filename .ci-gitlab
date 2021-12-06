@@ -1,0 +1,5 @@
+perftest-master:
+  stage: perftest
+  image: registry.gitlab.com/finestructure/pipeline-trigger
+  script:
+    - mvn gatling:test -D"gatling.simulationClass"="com.myGatlingTest.MyComputerJourney"
